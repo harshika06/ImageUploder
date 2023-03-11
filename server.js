@@ -8,10 +8,8 @@ const app = express();
 const imagemModelo = require('./src/modelos/galeria');
 
 // Conectando ao DB
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true }, .then()=>console.log("connection Suceesss")
-)
-
-});
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("connection Successs"));
 
 // Configurando app
 app.use(bodyParser.urlencoded({ extended: false }));
